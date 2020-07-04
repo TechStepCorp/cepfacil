@@ -17,8 +17,8 @@ class StateController {
         const sanatizedQuery = UtilsService.sanatizeString(q);
 
         if (
-          sanatizedInitals.includes(sanatizedQuery) ||
-          sanatizedState.includes(sanatizedQuery)
+          sanatizedState.includes(sanatizedQuery) ||
+          sanatizedInitals.includes(sanatizedQuery)
         )
           return state;
       });

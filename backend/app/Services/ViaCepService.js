@@ -2,10 +2,12 @@
 
 const axios = require("axios");
 
+const Env = use("Env");
+
 class ViaCepService {
   constructor() {
     this.instance = axios.create({
-      baseURL: "http://viacep.com.br/ws/",
+      baseURL: Env.get("VIA_CEP_URL"),
     });
   }
 
