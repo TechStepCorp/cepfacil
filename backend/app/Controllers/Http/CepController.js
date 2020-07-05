@@ -1,14 +1,20 @@
 "use strict";
 
-const ViaCepService = use("App/Services/ViaCepService");
+const CepAbertoService = use("App/Services/CepAbertoService");
 
 const CepTransformer = use("App/Transformers/CepTransformer");
 
 class CepController {
   async index({ request }) {
-    const { data = [] } = await ViaCepService.getCeps(request.all());
+    request;
 
-    return CepTransformer.collection(data);
+    const { latitude, longitude } = request.all();
+    const { data: cep } = await CepAbertoService.getCepByLatLong({
+      latitude,
+      longitude,
+    });
+
+    return CepTransformer.item(cep);
   }
 }
 

@@ -16,7 +16,9 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use("Route");
 
-Route.get("/ceps", "CepController.index").validator("Cep");
+Route.get("/", () => "teste");
+
+Route.get("/cep", "CepController.index").validator("Cep");
 
 Route.get("/states", "StateController.index");
 Route.get("/cities", "CityController.index").validator("City");

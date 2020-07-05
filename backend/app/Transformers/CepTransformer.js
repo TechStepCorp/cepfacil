@@ -10,8 +10,6 @@ class CepTransformer {
 
     if (list.length > 0 && list.length < 4) latLongFlag = true;
 
-    console.log(latLongFlag);
-
     for (const item of list) {
       const {
         cep,
@@ -47,21 +45,19 @@ class CepTransformer {
     const {
       cep,
       logradouro: street,
-      localidade: city,
       uf: stateInitials,
+      bairro: neighborhood,
+      cidade: city,
+      estado: state,
     } = item;
-
-    const res = await CepAbertoService.getLatLongByCep({
-      cep,
-    }).catch((e) => console.log(e.response.status));
 
     return {
       cep,
       street,
-      city,
       stateInitials,
-      latitude: res && res.data.latitude,
-      longitude: res && res.data.longitude,
+      neighborhood,
+      city,
+      state,
     };
   }
 

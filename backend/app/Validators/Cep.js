@@ -7,17 +7,15 @@ class Cep {
 
   get rules() {
     return {
-      initials: "required",
-      city: "required",
-      street: "required",
+      latitude: "required",
+      longitude: "required",
     };
   }
 
   get messages() {
     return {
-      "initials.required": "O estado é obrigatório.",
-      "city.required": "A cidade é obrigatória.",
-      "street.required": "A rua é obrigatória.",
+      "latitude.required": "A latitude é obrigatório.",
+      "longitude.required": "A longitude é obrigatória.",
     };
   }
 }
