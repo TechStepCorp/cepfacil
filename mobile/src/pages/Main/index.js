@@ -127,6 +127,7 @@ export default function Main() {
   if (!currentRegion)
     return (
       <ActivityIndicator
+        color='#072B4F'
         style={{ flex: 1, justifyContent: 'center' }}
         animating={true}
         size='large'
@@ -158,7 +159,7 @@ export default function Main() {
         <Dialog visible={loading}>
           <ActivityIndicator
             style={{ flex: 1, justifyContent: 'center' }}
-            color={'#3598FE'}
+            color='#072B4F'
             animating={true}
             size='large'
           />
