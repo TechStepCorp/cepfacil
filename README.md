@@ -28,6 +28,6 @@ Em um terminal, entre no diretório `/mobile`  e  execute o comando a seguir par
 ```
 Utilizando o aplicativo Expo (baixado na [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent)), leia o QRCode para abrir o app.
 
-![Ilustração](https://user-images.githubusercontent.com/42303025/86652300-aae24800-bfba-11ea-9fcd-cd38faea1032.jpeg)
+## Contribuições
 
-
+Obrigado a [davifmarcelino](https://github.com/davifmarcelino) pela contribuição do projeto do começo ao fim.
